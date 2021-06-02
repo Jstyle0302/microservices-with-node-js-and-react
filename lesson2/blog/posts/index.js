@@ -18,6 +18,7 @@ app.post('/posts', (req, res) => {
     posts[id] = {
         id, title
     }
+    res.status(201).send(posts[id]);
 });
 
 app.listen(4000, ()=> {
