@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const App = () => {
+const PostCreate = () => {
     const [title, setTitle] = useState('');
     
     const onSubmit = async (event) => {
@@ -10,6 +10,8 @@ const App = () => {
         await axios.post('http://localhost:4000/posts', {
             title
         });
+
+        setTitle("");
     };
     
     return (
@@ -25,4 +27,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default PostCreate;
